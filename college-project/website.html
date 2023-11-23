@@ -66,53 +66,64 @@
         .nav-links ul li:hover::after {
             width: 100%;
         }
-        .text-box{
+
+        .text-box {
             width: 90%;
             color: #fff;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             text-align: center;
         }
-        .text-box h1{
+
+        .text-box h1 {
             font-size: 62px;
         }
-        .text-box p{
+
+        .text-box p {
             margin: 10px 0 40px;
             font-size: 14px;
             color: #fff;
         }
-        .hero-btn{
+
+        .hero-btn {
             display: inline-block;
             text-decoration: none;
             color: #fff;
             border: 1px solid;
             padding: 12px 34px;
             font-size: 13px;
-            background:transparent;
+            background: transparent;
             position: relative;
             cursor: pointer;
-            
+
 
         }
-        .hero-btn:hover{
+
+        .hero-btn:hover {
             border: 1px solid #f44336;
             background: #f44336;
             transform: 1s;
         }
-        
-        @media(max-width:700px){
-            .text-box h1{
+
+        nav .fa {
+            display: none;
+        }
+
+        @media(max-width:700px) {
+            .text-box h1 {
                 font-size: 20px;
             }
-            .nav-links ul li{
+
+            .nav-links ul li {
                 display: block;
 
             }
-            .nav-links{
+
+            .nav-links {
                 position: absolute;
-                background:#f44336;
+                background: #f44336;
                 height: 100vh;
                 width: 200px;
                 top: 0;
@@ -121,26 +132,165 @@
                 z-index: 2;
 
             }
-            nav .fa{
+
+            nav .fa {
                 display: block;
                 color: #fff;
                 margin: 10px;
                 font-size: 22px;
                 cursor: pointer;
             }
-            .nav-links ul{
+
+            .nav-links ul {
                 padding: 30px;
             }
         }
 
+        /* course */
+        .course {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #777;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        .row {
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .course-col {
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            box-sizing: border-box;
+            transform: 0.5s;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .course-col:hover {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+
+        }
+
+        @media(max-width:700px) {
+            .row {
+                flex-direction: column;
+            }
+
+        }
+
+        /*-----compus----- */
+        .compus {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .compus-col {
+            flex-basis: 32%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .compus-col img {
+            width: 100%;
+            display: block;
+
+        }
+
+        .layer {
+            background: transparent;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: 0.3s;
+        }
+
+        .layer:hover {
+            background: rgba(226, 0, 0, 0.7);
+        }
+
+        .layer h3 {
+            width: 100%;
+            font-weight: 500;
+            color: #fff;
+            font-size: 26px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            opacity: 0;
+            transform: 0.5s;
+        }
+
+        .layer:hover h3 {
+            bottom: 49%;
+            opacity: 1;
+        }
+
+        /* ------facilities-------- */
+        .facilities{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .facilities-col{
+            flex-basis: 31%;
+            border-radius:10px ;
+            margin-bottom: 5%;
+            text-align: left;
+
+        }
+        .facilities-col img{
+            width: 100%;
+            border-radius: 10%;
+        }
+        .facilities-col p{
+            padding: 0%;
+        }
+        .facilities-col h3{
+            margin-top: 16px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
     </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <section class="header">
         <nav>
-            <a href="website.html"><img src="images/mlogo.png" alt="logo" class="w-25"></a>
+            <a href="website.html"><img src="images/logo.png" alt="logo" class="w-50"></a>
             <div class="nav-links" id="navLink">
                 <i class='fa fa-times' onclick="hideMenu()"></i>
                 <ul>
@@ -151,24 +301,109 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
-           <i class='fa fa-bars'onclick="showMenu()"></i>
+            <i class='fa fa-bars' onclick="showMenu()"></i>
         </nav>
         <div class="text-box">
             <h1>World's Biggest University</h1>
-            <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS, <br> JavaScript
+            <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS, <br>
+                JavaScript
                 and you are good to go</p>
-                <a href="" class="hero-btn">Visit Us To know More</a>
+            <a href="" class="hero-btn">Visit Us To know More</a>
         </div>
 
     </section>
+    <!-- Course -->
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+        <div class="row">
+            <div class="course-col">
+                <h3 class="">Intermediate</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laborum cupiditate ab consequatur.
+                    Fuga aut nulla veritatis et sed excepturi iure corrupti ab eius suscipit animi, accusantium aliquid
+                    error numquam!</p>
+            </div>
+            <div class="course-col">
+                <h3 class="">Deggree</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laborum cupiditate ab consequatur.
+                    Fuga aut nulla veritatis et sed excepturi iure corrupti ab eius suscipit animi, accusantium aliquid
+                    error numquam!</p>
+            </div>
+            <div class="course-col">
+                <h3 class="">Post graduation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laborum cupiditate ab consequatur.
+                    Fuga aut nulla veritatis et sed excepturi iure corrupti ab eius suscipit animi, accusantium aliquid
+                    error numquam!</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- compus -->
+    <section class="compus">
+        <h1>Our Global Campus</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+
+        <div class="row">
+            <div class="compus-col ">
+                <img src="images/U-india.jpg" alt="">
+                <div class="layer">
+                    <h3>INDIA</h3>
+                </div>
+            </div>
+            <div class="compus-col ">
+                <img src="images/U-Newyork.jpg" alt="">
+                <div class="layer">
+                    <h3>NEW YORK</h3>
+                </div>
+            </div>
+            <div class="compus-col ">
+                <img src="images/U-london.jpg " alt="">
+                <div class="layer">
+                    <h3>LONDON</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------ Facilities ----->
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images/lab-1.jpg" alt="img">
+                <h3>World Class Library</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non distinctio ipsa quaerat obcaecati,
+                    corrupti earum eum in officia tenetur possimus. Ea porro nemo voluptate alias modi temporibus
+                    inventore harum rerum.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="images/basketball.jpg" alt="img">
+                <h3>Largest Play Ground</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non distinctio ipsa quaerat obcaecati,
+                    corrupti earum eum in officia tenetur possimus. Ea porro nemo voluptate alias modi temporibus
+                    inventore harum rerum.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="images/clg canting.jpg" alt="img">
+                <h3>Testy and Healthly Food</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non distinctio ipsa quaerat obcaecati,
+                    corrupti earum eum in officia tenetur possimus. Ea porro nemo voluptate alias modi temporibus
+                    inventore harum rerum.</p>
+            </div>
+            
+        </div>
+    </section>
+
 
     <script>
         // javascript for toggle menu create
         var navLink = document.getElementById("navLink");
-        function showMenu(){
+        function showMenu() {
             navLink.style.right = "0";
         }
-        function hideMenu(){
+        function hideMenu() {
             navLink.style.right = "-200px";
         }
     </script>
