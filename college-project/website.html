@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College website</title>
+    <title>University Website</title>
     <style>
         * {
             margin: 0;
@@ -14,10 +14,7 @@
         .header {
             min-height: 100vh;
             width: 100%;
-            /* background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7), url(/images/banner.jpg)); */
-            /* background-image:url(/images/banner.jpg); */
             background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.jpg);
-
             background-position: center;
             background-size: cover;
             position: relative;
@@ -257,32 +254,76 @@
         }
 
         /* ------facilities-------- */
-        .facilities{
+        .facilities {
             width: 80%;
             margin: auto;
             text-align: center;
             padding-top: 100px;
         }
-        .facilities-col{
+
+        .facilities-col {
             flex-basis: 31%;
-            border-radius:10px ;
+            border-radius: 10px;
             margin-bottom: 5%;
             text-align: left;
 
         }
-        .facilities-col img{
+
+        .facilities-col img {
             width: 100%;
-            border-radius: 10%;
+            border-radius: 10px;
         }
-        .facilities-col p{
-            padding: 0%;
+
+        .facilities-col p {
+            padding: 0;
         }
-        .facilities-col h3{
+
+        .facilities-col h3 {
             margin-top: 16px;
             margin-bottom: 15px;
             text-align: left;
         }
 
+        /* ---testimonials ----*/
+        .testimonials {
+            width: 80%;
+            margin: auto;
+            padding-top: 100px;
+            text-align: center;
+        }
+        .testimonials-col{
+            flex-basis: 44%;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            text-align: left;
+            background:#fff3f3;
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+
+
+        }
+        .testimonials-col img {
+    height: 91px;
+    margin-left: 5px;
+    margin-right: 1%;
+    border-radius: 48%;
+}@media(max-width:700px) {
+            .row {
+                flex-direction: column;
+            }
+            .testimonials-col img{
+                height: 91px;
+                border-radius: 50%;
+                width: auto;
+            }
+            p{
+              text-align: justify;
+            }
+
+        }
+
+        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -392,9 +433,46 @@
                     corrupti earum eum in officia tenetur possimus. Ea porro nemo voluptate alias modi temporibus
                     inventore harum rerum.</p>
             </div>
+
+        </div>
+    </section>
+
+    <!-- testimonials -->
+    <section class="testimonials">
+        <h1>What Our Student Says</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, veritatis? Atque error magnam quae ullam
+            impedit tempore facere</p>
+        <div class="row">
+            <div class="testimonials-col">
+                <div class="row">
+                    <img src="images/user2.png" alt="img" class="col">
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugit laudantium optio rerum
+                            ipsam illo est neque ratione et nihil eveniet tenetur, impedit harum dolorum nemo voluptate,
+                            consectetur sed aliquam, dolores totam voluptatum. Consectetur atque esse veniam possimus magnam
+                            autem iure cupiditate sunt dolorum quod deleniti sint, illum enim! Sit earum est architecto
+                            minima aliquid!</p>
+                            <h3>Ankita varma </h3>
+                    </div>
+                </div>
+              </div>
+              <div class="testimonials-col">
+                <div class="row">
+                    <img src="images/user1.jpg" alt="img" class="col">
+                    <div class="col">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugit laudantium optio rerum
+                            ipsam illo est neque ratione et nihil eveniet tenetur, impedit harum dolorum nemo voluptate,
+                            consectetur sed aliquam, dolores totam voluptatum. Consectetur atque esse veniam possimus magnam
+                            autem iure cupiditate sunt dolorum quod deleniti sint, illum enim! Sit earum est architecto
+                            minima aliquid!</p>
+                            <h3>Gopal Sharma </h3>
+                    </div>
+                </div>
+              </div>
             
         </div>
     </section>
+
 
 
     <script>
