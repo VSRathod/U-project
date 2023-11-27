@@ -5,326 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>University Website</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .header {
-            min-height: 100vh;
-            width: 100%;
-            background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner.jpg);
-            background-position: center;
-            background-size: cover;
-            position: relative;
-        }
-
-        nav {
-            display: flex;
-            padding: 2% 6%;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav img {
-            width: 100px;
-        }
-
-        .nav-link {
-
-            flex: 1;
-            text-align: right;
-        }
-
-        .nav-links ul li {
-            list-style: none;
-            display: inline-block;
-            padding: 8px 12px;
-            position: relative;
-        }
-
-        .nav-links ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        .nav-links ul li::after {
-            content: '';
-            width: 0%;
-            height: 2px;
-            background: #f44336;
-            display: block;
-            margin: auto;
-            transition: 0.5s;
-        }
-
-        .nav-links ul li:hover::after {
-            width: 100%;
-        }
-
-        .text-box {
-            width: 90%;
-            color: #fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-        }
-
-        .text-box h1 {
-            font-size: 62px;
-        }
-
-        .text-box p {
-            margin: 10px 0 40px;
-            font-size: 14px;
-            color: #fff;
-        }
-
-        .hero-btn {
-            display: inline-block;
-            text-decoration: none;
-            color: #fff;
-            border: 1px solid;
-            padding: 12px 34px;
-            font-size: 13px;
-            background: transparent;
-            position: relative;
-            cursor: pointer;
-
-
-        }
-
-        .hero-btn:hover {
-            border: 1px solid #f44336;
-            background: #f44336;
-            transform: 1s;
-        }
-
-        nav .fa {
-            display: none;
-        }
-
-        @media(max-width:700px) {
-            .text-box h1 {
-                font-size: 20px;
-            }
-
-            .nav-links ul li {
-                display: block;
-
-            }
-
-            .nav-links {
-                position: absolute;
-                background: #f44336;
-                height: 100vh;
-                width: 200px;
-                top: 0;
-                right: -200px;
-                text-align: left;
-                z-index: 2;
-
-            }
-
-            nav .fa {
-                display: block;
-                color: #fff;
-                margin: 10px;
-                font-size: 22px;
-                cursor: pointer;
-            }
-
-            .nav-links ul {
-                padding: 30px;
-            }
-        }
-
-        /* course */
-        .course {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            padding-top: 100px;
-        }
-
-        h1 {
-            font-size: 36px;
-            font-weight: 600;
-        }
-
-        p {
-            color: #777;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 22px;
-            padding: 10px;
-        }
-
-        .row {
-            margin-top: 5%;
-            display: flex;
-            justify-content: space-between;
-
-        }
-
-        .course-col {
-            flex-basis: 31%;
-            background: #fff3f3;
-            border-radius: 10px;
-            margin-bottom: 5%;
-            padding: 20px 12px;
-            box-sizing: border-box;
-            transform: 0.5s;
-        }
-
-        h3 {
-            text-align: center;
-            font-weight: 600;
-            margin: 10px 0;
-        }
-
-        .course-col:hover {
-            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-
-        }
-
-        @media(max-width:700px) {
-            .row {
-                flex-direction: column;
-            }
-
-        }
-
-        /*-----compus----- */
-        .compus {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            padding-top: 50px;
-        }
-
-        .compus-col {
-            flex-basis: 32%;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .compus-col img {
-            width: 100%;
-            display: block;
-
-        }
-
-        .layer {
-            background: transparent;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: 0.3s;
-        }
-
-        .layer:hover {
-            background: rgba(226, 0, 0, 0.7);
-        }
-
-        .layer h3 {
-            width: 100%;
-            font-weight: 500;
-            color: #fff;
-            font-size: 26px;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            position: absolute;
-            opacity: 0;
-            transform: 0.5s;
-        }
-
-        .layer:hover h3 {
-            bottom: 49%;
-            opacity: 1;
-        }
-
-        /* ------facilities-------- */
-        .facilities {
-            width: 80%;
-            margin: auto;
-            text-align: center;
-            padding-top: 100px;
-        }
-
-        .facilities-col {
-            flex-basis: 31%;
-            border-radius: 10px;
-            margin-bottom: 5%;
-            text-align: left;
-
-        }
-
-        .facilities-col img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .facilities-col p {
-            padding: 0;
-        }
-
-        .facilities-col h3 {
-            margin-top: 16px;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        /* ---testimonials ----*/
-        .testimonials {
-            width: 80%;
-            margin: auto;
-            padding-top: 100px;
-            text-align: center;
-        }
-        .testimonials-col{
-            flex-basis: 44%;
-            border-radius: 10px;
-            margin-bottom: 5%;
-            text-align: left;
-            background:#fff3f3;
-            padding: 25px;
-            cursor: pointer;
-            display: flex;
-
-
-        }
-        .testimonials-col img {
-    height: 91px;
-    margin-left: 5px;
-    margin-right: 1%;
-    border-radius: 48%;
-}@media(max-width:700px) {
-            .row {
-                flex-direction: column;
-            }
-            .testimonials-col img{
-                height: 91px;
-                border-radius: 50%;
-                width: auto;
-            }
-            p{
-              text-align: justify;
-            }
-
-        }
-
-        
-    </style>
+   <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -447,35 +128,66 @@
                 <div class="row">
                     <img src="images/user2.png" alt="img" class="col">
                     <div class="col">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugit laudantium optio rerum
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugit laudantium optio
+                            rerum
                             ipsam illo est neque ratione et nihil eveniet tenetur, impedit harum dolorum nemo voluptate,
-                            consectetur sed aliquam, dolores totam voluptatum. Consectetur atque esse veniam possimus magnam
+                            consectetur sed aliquam, dolores totam voluptatum. Consectetur atque esse veniam possimus
+                            magnam
                             autem iure cupiditate sunt dolorum quod deleniti sint, illum enim! Sit earum est architecto
                             minima aliquid!</p>
-                            <h3>Ankita varma </h3>
+                        <h3>Ankita varma </h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
                     </div>
                 </div>
-              </div>
-              <div class="testimonials-col">
+            </div>
+            <div class="testimonials-col">
                 <div class="row">
                     <img src="images/user1.jpg" alt="img" class="col">
                     <div class="col">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugit laudantium optio rerum
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugit laudantium optio
+                            rerum
                             ipsam illo est neque ratione et nihil eveniet tenetur, impedit harum dolorum nemo voluptate,
-                            consectetur sed aliquam, dolores totam voluptatum. Consectetur atque esse veniam possimus magnam
+                            consectetur sed aliquam, dolores totam voluptatum. Consectetur atque esse veniam possimus
+                            magnam
                             autem iure cupiditate sunt dolorum quod deleniti sint, illum enim! Sit earum est architecto
                             minima aliquid!</p>
-                            <h3>Gopal Sharma </h3>
+                        <h3>Gopal Sharma </h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
                     </div>
                 </div>
-              </div>
-            
+            </div>
+
         </div>
     </section>
 
+    <!-- call to Action -->
+    <section class="cta">
+        <h1>Enroll For Our Various online Courses <br>Anywhere From The World</h1>
+        <a href="" class="hero-btn">CONTACT US</a>
+    </section>
 
+    <!-- About us -->
+    <section class="footer">
+        <h1>About us</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore illo deleniti aliquid esse accusamus ipsam!</p>
+         <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+         </div>
+         <p>Made with <i class="fa fa-heart-o"></i> by Vikas Rathod </p>
+    </section>
 
-    <script>
+<script>
         // javascript for toggle menu create
         var navLink = document.getElementById("navLink");
         function showMenu() {
